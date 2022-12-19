@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans';
+}
+body{
+    display:  flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#F0FFFF)
+}
+.container{
+    max-width: 750px;
+    width: 100%;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 7px;
+    border:1px solid black;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative; 
+    text-align: center;   
+}
+.container .title ::before{
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(135deg,#063247, #f1872a);
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+
+}
+.user-details .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius:  7px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:focus{
+    border-color : #0909FF;
+}
+form .button{
+    height: 60px;
+    margin: 50px 0;
+}
+form .input1{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#063247, #f1872a)
+}
+form .input1:hover{
+    background:  linear-gradient(135deg,#f1872a,#063247);
+}
+.logo .logo1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+}
+header .logo img{
+    float:left;
+    margin-top: -30px;
+    margin-left: 10px;
+    margin-bottom: -25px;
+    object-fit:contain;
+  }
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    background: linear-gradient(135deg,#063247, #f1872a);
+    padding:1rem 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  header input{
+    display: none;
+  }
+  header label{
+    font-size: 3rem;
+    color:white;
+    text-shadow: 0.5px 0.5px black;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+  }
+  header .logo span{
+    color:white;
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px black;
+  }
+  
+  header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+  header .navbar a:hover{
+    color:#063247;
+    text-shadow: 1px 1px white;
+  }

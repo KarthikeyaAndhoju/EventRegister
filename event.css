@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans';
+    text-decoration: none;
+   
+}
+body{
+    background-image: url('aud2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:1;
+}
+
+.imgbx{
+    float: left;
+    clear: both;
+    width: 40%;
+    height: 100%;
+}
+
+.imgbx .i1{
+    position:relative;
+    top:10px;
+    left:60px;
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+    border-image: 10 round;
+}
+
+
+.contentbx{
+    position: right;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.contentbx .formbx{
+    max-width: 350px;
+    width: 100%;
+    height:50%;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 7px;
+    border: 2px solid black;
+    border-color: #000000;
+}
+.contentbx .formbx h2{
+    color: #f1872a;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #607d8b;
+    display: inline-block;
+    letter-spacing: 1px;
+    justify-content: center;
+}
+.contentbx .formbx .inputbx{
+    margin-bottom: 20px;
+}
+.contentbx .formbx .inputbx span{
+    font-size: 16px;
+    margin-bottom:  5px;
+    display: inline-block;
+    color: #000000;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.contentbx .formbx .inputbx input{
+    width: 100%;
+    padding: 10px 25px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #000000;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000000;
+    background: transparent;
+    border-radius: 4px;
+}
+.contentbx .formbx .inputbx input[type="submit"]{
+    background: linear-gradient(225deg,#f1872a, #000000) ;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.contentbx .formbx .inputbx input[type="submit"]:hover{
+    background: linear-gradient(235deg,#000000,#f1872a);
+}
+.contentbx .formbx .remember{
+    margin-bottom: 10px;
+    color: #607d8b;
+    font-weight: 400;
+    font-size: 14px;
+}
+.contentbx .formbx .inputbx p{
+    color:#f1872a;
+}
+.contentbx .formbx .inputbx p a{
+    color: #000000;
+}
+.contentbx .formbx h4{
+    color: #607d8b;
+    text-align: center;
+    margin: 40px 0 10px;
+    font-weight: 500;
+}
+ .contentbx .formbx .sci{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.contentbx .formbx .sci .li{
+    list-style: none;
+    color: #607d8b; 
+}
+@media (max-width: 768px){
+    .imgbx{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .contentbx{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    .contentbx .formbx{
+        width: 100%;
+        padding: 40px;
+        background: rgb(255 255 255 / 0.9);
+        margin: 50px;
+    }
+    .contentbx .formbx h3{
+        color: #607d8b;
+        text-align: center;
+        margin: 30px 0 10px;
+        font-weight: 500;
+    }
+}

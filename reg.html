@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title> REGISTER</title>
+		<link rel="stylesheet" href="reg.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<script>
+			function register(){
+				let d=document.getElementById("dt");
+				let t=document.getElementById("a1");
+				alert("You reserved an auditorium successfully on" + d +"," + t);
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<a href="#" class="logo"><img src="ip.png"><span class="l1">EVENT REGISTER</span></a>
+			<input type="checkbox" id="menu-bar">
+			<label for="menu-bar" class="fas fa-bars"></label>
+			<nav class="navbar">
+				<a href="index.html">HOME</a>
+				<a href="reg.html">REGISTER</a>
+				<a href="event.html">SIGNOUT</a>
+			</nav>
+		  </header>
+		<div class="container">
+		<div class="logo"></div>
+			<div class="title">REGISTER AN AUDITORIUM</div>
+			<form action="#">
+				<div class="user-details">
+					<div class="input-box">
+						<span class="details" >FACULTY NAME</span>
+						<input type="text" placeholder="Enter your name" required>
+					</div>
+					<br>
+					<div class="input-box">
+						<span class="details" >Email ID</span>
+						<input type="email" placeholder="Enter your emailid" required>
+					</div>
+					<br>
+
+					<div class="input-box">
+						<span class="details" >FACULTY ID</span>
+						<input type="text" placeholder="Enter the faculty id" required>
+					</div>
+					<br>
+					<div class="input-box">
+						<span class="details" >DATE OF TEHE EVENT</span>
+						<input type="date" id="dt"placeholder="Enter your data of birth" required>
+					</div>
+					<br>
+					<div class="input-box">
+						<span class="details" >SELECT AN AUDITORIUM</span>
+						<select name="Auditorium" id="a1">
+							<option value="ma">MAIN AUDITORIUM</option>
+							<option value="mi">MINI AUDITORIUM</option>
+							<option value="mi1">AUDITORIUM-1009</option>
+						</select>
+					</div>
+					<br>
+					<div class="input-box">
+						<span class="details" >TIMINGS</span>
+						<select name="timings" id="tg">
+							<option value="FN">FORENOON</option>
+							<option value="AN">AFTERNOON</option>
+						</select>
+					</div>
+					
+				</div>
+				<button class="input1" onclick="register()" type="button">Register</button>
+			</form>
+		</div>
+		
+	</body>
+</html>
