@@ -9,19 +9,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link  href="{{ url_for('static', path='\style.css') }}" rel="stylesheet">
     </head>
     <body>
+      
       <header>
-        <a href="#" class="logo"><img src="ip.png"><span class="l1">EVENT REGISTER</span></a>
+        
+
+        <a href="#" class="logo"><img src="{{ url_for('static', path='\ip.png') }}"><span class="l1">EVENT REGISTER</span></a>
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar" class="fas fa-bars"></label>
         <nav class="navbar">
-            <a href="index1.html">HOME</a>
-            <a href="reg.html">REGISTER</a>
-            <a href="event.html">SIGNOUT</a>
+          <form id="home" action="/home" method="get"></form>
+            <a onclick="submitForm1()">HOME</a>
+            <form id="reg" action="/register" method="get"></form>
+            <a  onclick="submitForm()">REGISTER</a>
+            <form id="signout" action="/signout" method="get" name></form>
+            <a onclick="submitForm2()" >SIGNOUT</a>
         </nav>
-      </header>
+      </header> 
+
         <section class="features" id="features">
           <br>
           <br>
@@ -35,23 +42,24 @@
         </div>
           <div class="box-container">
       
+              
               <div class="box">
-                  <img class="imag" src="main.png" alt="">
-                  <h3>MAIN AUDITORIUM</h3>
-                  <p>Vardhaman's main auditorium has an seating capacity of 1500, Always open for talks...</p>
-              </div>
-      
-              <div class="box">
-                  <img class="imag" src="mini.png" alt="">
+                  <img class="imag" src="{{ url_for('static', path='\mini.png') }}" alt="">
                   <h3>MINI AUDITORIUM</h3>
                   <p>Vardhaman's mini auditorium has an seating capacity of 500, Always open for talks...</p>
               </div>
       
               <div class="box">
-                  <img class="imag" src="mini1.png" alt="">
+                  <img class="imag" src="{{ url_for('static', path='\mini1.png') }}" alt="">
                   <h3>AUDITORIUM(1009)</h3>
                   <p>Vardhaman's auditorium(1009) has an seating capacity of 200, Always open for talks...</p>
               </div>
+              <div class="box">
+                <img class="imag" src="{{ url_for('static', path='\main.png') }}"alt="">
+                <h3>MAIN AUDITORIUM</h3>
+                <p>Vardhaman's main auditorium has an seating capacity of 1500, Always open for talks...</p>
+            </div>
+    
       
           </div>
       
@@ -78,12 +86,26 @@
                     </div>
                   </div>
                   <div class="row footer_bottom justify-content-center">
-                    <p class="col-lg-8 col-sm-12 footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by EXITO</p>
+                    <p class="col-lg-8 col-sm-12 footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  </p>
                 </p>
                   </div>
                 </div>
             </div>
         </div>
-        <script src="" async defer></script>
+        <script>
+          function submitForm() {
+              let form = document.getElementById("reg");
+              form.submit();
+          }
+          function submitForm1() {
+              let form = document.getElementById("home");
+              form.submit();
+          }
+          
+          function submitForm2() {
+              let form = document.getElementById("signout");
+              form.submit();
+          }
+      </script>
     </body>
 </html>

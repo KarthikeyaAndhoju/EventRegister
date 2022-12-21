@@ -1,78 +1,102 @@
-
 <!DOCTYPE html>
 <html >
 	<head>
 		<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title> REGISTER</title>
-		<link rel="stylesheet" href="reg.css">
+		<link  href="{{ url_for('static', path='/reg.css') }}" rel="stylesheet">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<script>
 			function register(){
 				let d=document.getElementById("dt");
 				let t=document.getElementById("a1");
-				alert("You reserved an auditorium successfully on" + d +"," + t);
+				alert("you would like to book auditorium on" + d +"," + t);
 			}
+			function submitForm() {
+              let form = document.getElementById("reg");
+              form.submit();
+          }
+          function submitForm1() {
+              let form = document.getElementById("home");
+              form.submit();
+          }
+          
+          function submitForm2() {
+              let form = document.getElementById("signout");
+              form.submit();
+          }
+		  function submitForm3() {
+              let form = document.getElementById("submitdata");
+              form.submit();
+          }
 		</script>
+		
 	</head>
 	<body>
+
 		<header>
-			<a href="#" class="logo"><img src="ip.png"><span class="l1">EVENT REGISTER</span></a>
+			<a href="#" class="logo"><img src="{{ url_for('static', path='\ip.png') }}"><span class="l1">EVENT REGISTER</span></a>
 			<input type="checkbox" id="menu-bar">
 			<label for="menu-bar" class="fas fa-bars"></label>
 			<nav class="navbar">
-				<a href="index.html">HOME</a>
-				<a href="reg.html">REGISTER</a>
-				<a href="event.html">SIGNOUT</a>
+				<form id="home" action="/home" method="get"></form>
+            <a onclick="submitForm1()">HOME</a>
+            <form id="reg" action="/register" method="get"></form>
+            <a  onclick="submitForm()">REGISTER</a>
+            <form id="signout" action="/signout" method="get" name></form>
+            <a onclick="submitForm2()" >SIGNOUT</a>
+        </nav>
 			</nav>
 		  </header>
+		  <form id="form_id" action="/signout" method="get"></form>
 		<div class="container">
-		<div class="logo"></div>
 			<div class="title">REGISTER AN AUDITORIUM</div>
-			<form action="#">
+			<form id="submitdata" action="/submitevent" method="post">
 				<div class="user-details">
 					<div class="input-box">
 						<span class="details" >FACULTY NAME</span>
-						<input type="text" placeholder="Enter your name" required>
+						<input type="text" placeholder="Enter your name" name="name" required>
 					</div>
 					<br>
 					<div class="input-box">
 						<span class="details" >Email ID</span>
-						<input type="email" placeholder="Enter your emailid" required>
+						<input type="email" placeholder="Enter your emailid" name="email" required>
 					</div>
 					<br>
 
 					<div class="input-box">
 						<span class="details" >FACULTY ID</span>
-						<input type="text" placeholder="Enter the faculty id" required>
+						<input type="text" placeholder="Enter the faculty id" name="facultyid" required>
 					</div>
 					<br>
 					<div class="input-box">
 						<span class="details" >DATE OF TEHE EVENT</span>
-						<input type="date" id="dt"placeholder="Enter your data of birth" required>
+						<input type="date" id="dt"placeholder="Enter your data of birth" name="date" required>
 					</div>
 					<br>
 					<div class="input-box">
 						<span class="details" >SELECT AN AUDITORIUM</span>
 						<select name="Auditorium" id="a1">
-							<option value="ma">MAIN AUDITORIUM</option>
-							<option value="mi">MINI AUDITORIUM</option>
-							<option value="mi1">AUDITORIUM-1009</option>
+							<option value="main auditorium">MAIN AUDITORIUM</option>
+							<option value="mini auditorium">MINI AUDITORIUM</option>
+							<option value="mini auditorium 1009">AUDITORIUM-1009</option>
 						</select>
 					</div>
 					<br>
 					<div class="input-box">
 						<span class="details" >TIMINGS</span>
 						<select name="timings" id="tg">
-							<option value="FN">FORENOON</option>
-							<option value="AN">AFTERNOON</option>
+							<option value="FORENOON">FORENOON</option>
+							<option value="AFTERNOON">AFTERNOON</option>
 						</select>
 					</div>
 					
 				</div>
-				<button class="input1" onclick="register()" type="button">Register</button>
+				<button class="input1" onclick="register();submitForm3()" type="button">Register</button>
+
 			</form>
+				<h1> {{ id }} </h1>
 		</div>
-		
+		<br>
 	</body>
 </html>

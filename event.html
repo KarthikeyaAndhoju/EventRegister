@@ -8,30 +8,28 @@
         </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="event.css" rel="stylesheet">
+        <link  href="{{ url_for('static', path='\event.css') }}" rel="stylesheet">
     </head>
     <body >
             <div class="imgbx">
-                <img src="EVENT.png" class="i1"  alt="#">
+                <img src="{{ url_for('static', path='\EVENT.png') }}" class="i1"  alt="image loading">
             </div>
             <div class="contentbx">
                 <div class="formbx">
                     <h2>Signin</h2>
-                    <form>
+                    <form action="/submit" method="post">
                         <div class="inputbx">
                             <span>Username</span>
-                            <input type="text"  placeholder="Enter the username" name="">
+                            <input type="text"  placeholder="Enter the username" name="username">
                         </div>
                         <div class="inputbx">
                             <span>Password</span>
-                            <input type="password" placeholder="password" name="">
+                            <input type="password" placeholder="password" name="password">
                         </div>
                         <div class="inputbx">
                             <input type="submit" value="Signin" name="">
                         </div>
-                        <div class="inputbx">
-                            <p>Don't have an account? <a href="#">Signup</a></p>
-                        </div>
+                        
                     </form>
                 </div>
             </div>

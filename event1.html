@@ -1,0 +1,40 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            Let us Signin
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', path='\event.css') }}" rel="stylesheet">
+    </head>
+    <body >
+            <div class="imgbx">
+                <img src="{{ url_for('static', path='\EVENT.png') }}" class="i1"  alt="image loading">
+            </div>
+            <div class="contentbx">
+                <div class="formbx">
+                    <h2>Signin</h2>
+                    <form action="/submit" method="post">
+                        <div class="inputbx">
+                            <span>Username</span>
+                            <input type="text"  placeholder="Enter the username" name="username">
+                        </div>
+                        <div class="inputbx">
+                            <span>Password</span>
+                            <input type="password" placeholder="password" name="password">
+                        </div>
+                        <div class="inputbx">
+                            <input type="submit" value="Signin" name="">
+                        </div>
+                        <div class="'inputbx">
+                            <span>username or password is incorrect</span>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+    </body>
+</html>
